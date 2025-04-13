@@ -8,6 +8,17 @@ and arm64 architectures.
 
 This is not an officially supported Google product
 
+## 주의사항
+
+- Makefile에서 아래와 같이 주석 처리 필요
+- NDK를 사용하지 않는 상황에 대비되어 있지 않음
+
+```
+ifndef NDK_ROOT
+  #$(error NDK_ROOT is not set)
+endif
+```
+
 ## Clone and Build
 
 Clone the repository
